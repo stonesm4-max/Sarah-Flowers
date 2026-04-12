@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloom Flowers By Sarah</title>
-
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-
-<style>
-  body { background-color: #fffafc; }
-  .carousel img { border-radius: 10px; }
-</style>
-
 </head>
 
 <body>
 
-<header class="center-align">
-<h1>Bloom Flowers By Sarah 🌸</h1>
+<header>
+<h1>Bloom Flowers By Sarah</h1>
 <p>Fresh Flowers for Every Occasion</p>
 </header>
 
@@ -32,27 +21,84 @@
 </ul>
 </nav>
 
-<section class="container">
+<section>
 
 <h2>Welcome</h2>
 
-<img src="images/2.jpg" alt="Flower bouquet" class="main-img">
+<img src="Images/2.jpg" alt="Flower bouquet" class="main-img">
+<a href="materialize.html">Materialize</a>
 
 <p>
-Bloom Flowers by Sarah is a local flower shop dedicated to providing beautiful arrangements for every occasion. Flowers have always been a meaningful way to express emotions, celebrate milestones, and brighten someone’s day.
+Bloom Flowers by Sarah is a local flower shop dedicated to providing beautiful arrangements for every occasion. Flowers have always been a meaningful way to express emotions, celebrate milestones, and brighten someone’s day. Our shop focuses on creating arrangements that are both elegant and unique. Each bouquet is designed with care and attention to detail so customers receive something truly special. We believe flowers should tell a story and create lasting memories. Whether it is a birthday, anniversary, wedding, or simple act of kindness, flowers can say what words sometimes cannot. Our team carefully selects fresh flowers every day to ensure the best quality possible. Customers can choose from seasonal arrangements or custom bouquets designed just for them.
+
+At Bloom Flowers, we pride ourselves on excellent customer service and high-quality flowers. Our designers work with a variety of flowers including roses, lilies, tulips, and sunflowers. Every arrangement is created to highlight the natural beauty of each flower. We also believe that flowers should be accessible and affordable for everyone who wants to brighten their home or surprise someone special. Many customers visit us regularly because they know they can trust our designs and freshness. Freshness, creativity, and customer care are the values that guide everything we do. We invite you to explore our shop and discover the perfect bouquet for your next occasion.
 </p>
 
 </section>
 
+<footer>
+<p>© 2026 Bloom Flowers By Sarah</p>
+</footer>
+
+</body>
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bloom & Petal Flower Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+  <style>
+    body { padding-bottom: 48px; background-color: #fffafc; }
+    header { margin-bottom: 24px; }
+    .carousel img { border-radius: 10px; }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <nav class="pink lighten-2">
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo">Bloom & Petal 🌸</a>
+    </div>
+  </nav>
+</header>
+
+
+
 <div class="section container">
   <h4>Choose Your Favorite Flower</h4>
   <form>
-    <p><label><input name="flower" type="radio" value="Roses" onclick="displayFlower()"/><span>Roses</span></label></p>
-    <p><label><input name="flower" type="radio" value="Tulips" onclick="displayFlower()"/><span>Tulips</span></label></p>
-    <p><label><input name="flower" type="radio" value="Sunflowers" onclick="displayFlower()"/><span>Sunflowers</span></label></p>
+    <p>
+      <label>
+        <input name="flower" type="radio" value="Roses" onclick="displayFlower()"/>
+        <span>Roses</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="flower" type="radio" value="Tulips" onclick="displayFlower()"/>
+        <span>Tulips</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input name="flower" type="radio" value="Sunflowers" onclick="displayFlower()"/>
+        <span>Sunflowers</span>
+      </label>
+    </p>
   </form>
-  <div id="flower-response"></div>
+  <div id="flower-response" class="pink-text"></div>
 </div>
+
 
 <div class="section container">
   <h4>Join Our Flower Club 💌</h4>
@@ -61,82 +107,117 @@ Bloom Flowers by Sarah is a local flower shop dedicated to providing beautiful a
       <input id="email" type="email" required>
       <label for="email">Email</label>
     </div>
-    <button type="submit" class="btn pink">Subscribe</button>
+    <button type="submit" class="btn pink waves-effect">Subscribe</button>
   </form>
   <div id="email-response"></div>
 </div>
 
-<!-- MODAL -->
-
-<div id="thankYouModal" class="modal">
-  <div class="modal-content">
-    <h4>🌷 Thank You!</h4>
-    <p id="modal-text"></p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close btn pink">Close</a>
-  </div>
-</div>
-
 <main class="container">
 
-<h5>Featured Bouquets</h5>
+
+  <section>
+    <h5>Featured Bouquets</h5>
+
+```
+<div class="controls">
+  <button id="prev" class="btn pink">Prev</button>
+  <button id="next" class="btn pink">Next</button>
+</div>
 
 <div class="carousel" id="flowerCarousel">
   <a class="carousel-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"/></a>
   <a class="carousel-item"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946"/></a>
   <a class="carousel-item"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"/></a>
+  <a class="carousel-item"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51"/></a>
 </div>
+```
 
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Collapsible -->
+
+  <section>
+    <h5>About Our Shop</h5>
+
+```
 <ul class="collapsible" id="flowerInfo">
   <li class="active">
-    <div class="collapsible-header">Our Story</div>
-    <div class="collapsible-body"><p>Fresh, handcrafted bouquets made daily.</p></div>
+    <div class="collapsible-header"><i class="material-icons">local_florist</i>Our Story</div>
+    <div class="collapsible-body"><p>We create handcrafted bouquets using the freshest seasonal flowers.</p></div>
+  </li>
+
+  <li>
+    <div class="collapsible-header"><i class="material-icons">favorite</i>Why Choose Us?</div>
+    <div class="collapsible-body"><p>Each arrangement is designed with care, creativity, and love.</p></div>
+  </li>
+
+  <li>
+    <div class="collapsible-header"><i class="material-icons">local_shipping</i>Delivery Options</div>
+    <div class="collapsible-body"><p>Same-day delivery available for local orders.</p></div>
   </li>
 </ul>
+```
+
+  </section>
 
 </main>
 
-<footer class="center-align">
-<p>© 2026 Bloom Flowers By Sarah</p>
-</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+const modals = document.querySelectorAll('.modal');
+M.Modal.init(modals);
 
-  M.Modal.init(document.querySelectorAll('.modal'));
+  const carousel = M.Carousel.init(document.querySelector('#flowerCarousel'), {
+    duration: 200,
+    numVisible: 3
+  });
 
-  M.Carousel.init(document.querySelector('#flowerCarousel'));
+  document.getElementById('prev').onclick = () => carousel.prev();
+  document.getElementById('next').onclick = () => carousel.next();
 
-  M.Collapsible.init(document.querySelector('#flowerInfo'));
+  M.Collapsible.init(document.querySelector('#flowerInfo'), {
+    accordion: false
+  });
 
 });
 
 function displayFlower() {
   const flower = document.querySelector('input[name="flower"]:checked').value;
-  document.getElementById('flower-response').innerText =
-    "You selected: " + flower + " 🌸";
+  document.getElementById('flower-response').innerText = "You selected: " + flower + " 🌸";
 }
 
 function submitEmail(event) {
   event.preventDefault();
-
   const email = document.getElementById('email').value;
-
   document.getElementById('email-response').innerText =
     "Thanks for joining! 🌷 Updates will be sent to: " + email;
-
-  document.getElementById('modal-text').innerText =
-    "You're officially part of Bloom & Petal! Updates will be sent to: " + email;
-
-  const modal = M.Modal.getInstance(document.getElementById('thankYouModal'));
-  modal.open();
-
   document.getElementById('email').value = "";
+  function submitEmail(event) {
+event.preventDefault();
+
+const email = document.getElementById('email').value;
+
+document.getElementById('email-response').innerText =
+"Thanks for joining! 🌷 Updates will be sent to: " + email;
+
+document.getElementById('modal-text').innerText =
+"You're officially part of Bloom & Petal! Updates will be sent to: " + email;
+
+const modal = M.Modal.getInstance(document.getElementById('thankYouModal'));
+modal.open();
+
+document.getElementById('email').value = "";
+}
+
 }
 </script>
 
 </body>
+</html>
+
 </html>
