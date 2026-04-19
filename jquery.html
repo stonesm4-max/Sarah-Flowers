@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Flower Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe4ec;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container, .shop-section {
+  margin-top: 20px;
+}
+
+#toggleBtn {
+  background: #ec407a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#text {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.flower-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.flower-gallery img {
+  width: 150px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.flower-gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+  <button id="toggleBtn">Shop Now</button>
+  <p id="text">Select the kind of flowers you are shopping for!</p>
+</div>
+
+<div class="shop-section">
+  <h2>Shop Now</h2>
+
+  <div class="flower-gallery">
+    <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d">
+    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+  console.log("jQuery is working!");
+
+  $("#toggleBtn").click(function(){
+    $("#text").fadeToggle(400);
+
+    if ($("#text").is(":visible")) {
+      $(this).text("Hide Text");
+    } else {
+      $(this).text("Shop Now");
+    }
+  });
+
+
+  $(".flower-gallery img").click(function(){
+    $(this).toggleClass("selected");
+    alert("Added to cart 🌸");
+  });
+
+});
+</script>
+
+</body>
+</html>
