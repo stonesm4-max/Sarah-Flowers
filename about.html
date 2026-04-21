@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>About Bloom Flowers By Sarah</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+#cartBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background:#ec407a;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:20px;
+  z-index:1000;
+}
+</style>
 
 <script>
 function showMessage() {
   alert("Thank you for learning about Bloom Flowers By Sarah!");
 }
+
+$(document).ready(function(){
+
+  console.log("jQuery is connected!");
+
+  // -----------------------
+  // CART SYSTEM
+  // -----------------------
+  let cartCount = localStorage.getItem("cartCount") || 0;
+  $("#cartCount").text(cartCount);
+
+  $(".addCartBtn").click(function(){
+    cartCount++;
+    localStorage.setItem("cartCount", cartCount);
+    $("#cartCount").text(cartCount);
+  });
+
+  // -----------------------
+  // TOGGLE SHOP TEXT
+  // -----------------------
+  $("#shopBtn").click(function(){
+    $("#text").toggle();
+  });
+
+});
 </script>
 
 </head>
 
 <body>
+
+<!-- CART BUTTON -->
+<button id="cartBtn">
+  🛒 Cart: <span id="cartCount">0</span>
+</button>
 
 <header>
 <h1>About Our Flower Shop</h1>
@@ -24,6 +72,8 @@ function showMessage() {
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="shop.html">Shop</a></li>
+<li><a href="materialize.html">Materialize</a></li>
+<li><a href="jquery.html">jQuery</a></li>
 </ul>
 </nav>
 
@@ -31,39 +81,40 @@ function showMessage() {
 
 <h2>Our Story</h2>
 
-<img src="Images/1.jpg" alt="Flower bouquet" class="main-img">
-<a href="materialize.html">Materialize</a>
-
+<img src="Images/Images/1.jpg" alt="Flower bouquet" class="main-img">
 
 <p>
-Bloom Flowers By Sarah began as a small flower stand and eventually grew into a full flower shop. 
-The goal from the beginning was simple: provide fresh flowers and beautiful arrangements for the community. 
-Flowers are a timeless tradition used in celebrations, weddings, holidays, and special events. Our shop 
-focuses on providing arrangements that combine color, fragrance, and design. Every bouquet is carefully 
-crafted by experienced florists who understand the importance of quality flowers. Over time we have 
-developed a reputation for creativity and reliability. Customers often return because they know we care 
-about every arrangement we create. We also enjoy helping customers design custom bouquets for meaningful 
-moments in their lives.
+Bloom Flowers By Sarah began as a small flower stand and eventually grew into a full flower shop...
 </p>
 
 <p>
-We continue to grow while maintaining the personal touch that started our business. Our shop works with 
-trusted flower suppliers to make sure we always provide fresh and vibrant flowers. In addition to daily 
-arrangements, we also create designs for weddings, events, and seasonal holidays. Flowers can bring joy, 
-comfort, and beauty into any space, which is why we believe they are so important. Our team enjoys helping 
-customers find the perfect bouquet for their needs. Whether someone wants a romantic arrangement of roses 
-or a cheerful bouquet of sunflowers, we are always ready to help. Bloom Valley is proud to be a part of the 
-community and hopes to continue spreading beauty through flowers.
+We continue to grow while maintaining the personal touch that started our business...
 </p>
 
 <button onclick="showMessage()">Click to Learn More</button>
 
 <p>
-Visit our favorite flower inspiration website: 
+Visit our favorite flower inspiration website:
 <a href="https://www.ftd.com" target="_blank">FTD Flowers</a>
 </p>
 
 </section>
+
+<!-- SHOP SECTION -->
+<div class="container">
+  <button id="shopBtn">Shop Now</button>
+  <p id="text">Select the kind of flowers you are shopping for!</p>
+</div>
+
+<div class="shop-section">
+  <h2>Shop Now</h2>
+
+  <div class="flower-gallery">
+    <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d" alt="Bouquet">
+    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946" alt="Bouquet">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Bouquet">
+  </div>
+</div>
 
 <footer>
 <p>© 2026 Bloom Flowers By Sarah</p>
