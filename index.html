@@ -2,176 +2,149 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloom Flowers By Sarah</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 <link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  padding-bottom: 48px;
+  background-color: #fffafc;
+}
+
+.carousel img {
+  border-radius: 10px;
+}
+
+#cartBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background:#ec407a;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:20px;
+  z-index:1000;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-<h1>Bloom Flowers By Sarah</h1>
-<p>Fresh Flowers for Every Occasion</p>
-</header>
-
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="shop.html">Shop</a></li>
-</ul>
+<!-- NAV -->
+<nav class="pink lighten-2">
+  <div class="nav-wrapper container">
+    <a href="#" class="brand-logo">Bloom Flowers 🌸</a>
+    <ul class="right">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="materialize.html">Materialize</a></li>
+      <li><a href="jquery.html">jQuery</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+    </ul>
+  </div>
 </nav>
 
-<section>
+<!-- CART BUTTON -->
+<button id="cartBtn">
+  🛒 Cart: <span id="cartCount">0</span>
+</button>
 
-<h2>Welcome</h2>
+<!-- HERO -->
+<div class="container section">
+  <h3>Bloom Flowers By Sarah</h3>
+  <p>Fresh flowers for every occasion.</p>
 
-<img src="Images/2.jpg" alt="Flower bouquet" class="main-img">
-<a href="materialize.html">Materialize</a>
+  <img src="Images/Images/2.jpg" class="responsive-img" alt="Flowers">
 
-<p>
-Bloom Flowers by Sarah is a local flower shop dedicated to providing beautiful arrangements for every occasion. Flowers have always been a meaningful way to express emotions, celebrate milestones, and brighten someone’s day. Our shop focuses on creating arrangements that are both elegant and unique. Each bouquet is designed with care and attention to detail so customers receive something truly special. We believe flowers should tell a story and create lasting memories. Whether it is a birthday, anniversary, wedding, or simple act of kindness, flowers can say what words sometimes cannot. Our team carefully selects fresh flowers every day to ensure the best quality possible. Customers can choose from seasonal arrangements or custom bouquets designed just for them.
+  <p>
+    Bloom Flowers by Sarah is a local flower shop dedicated to providing beautiful arrangements...
+  </p>
+</div>
 
-At Bloom Flowers, we pride ourselves on excellent customer service and high-quality flowers. Our designers work with a variety of flowers including roses, lilies, tulips, and sunflowers. Every arrangement is created to highlight the natural beauty of each flower. We also believe that flowers should be accessible and affordable for everyone who wants to brighten their home or surprise someone special. Many customers visit us regularly because they know they can trust our designs and freshness. Freshness, creativity, and customer care are the values that guide everything we do. We invite you to explore our shop and discover the perfect bouquet for your next occasion.
-</p>
-
-</section>
-
-<footer>
-<p>© 2026 Bloom Flowers By Sarah</p>
-</footer>
-
-</body>
-
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bloom & Petal Flower Shop</title>
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-
-  <style>
-    body { padding-bottom: 48px; background-color: #fffafc; }
-    header { margin-bottom: 24px; }
-    .carousel img { border-radius: 10px; }
-  </style>
-
-</head>
-
-<body>
-
-<header>
-  <nav class="pink lighten-2">
-    <div class="nav-wrapper container">
-      <a href="#!" class="brand-logo">Bloom & Petal 🌸</a>
-    </div>
-  </nav>
-</header>
-
-
-
+<!-- RADIO SELECTION -->
 <div class="section container">
-  <h4>Choose Your Favorite Flower</h4>
-  <form>
-    <p>
-      <label>
-        <input name="flower" type="radio" value="Roses" onclick="displayFlower()"/>
-        <span>Roses</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="flower" type="radio" value="Tulips" onclick="displayFlower()"/>
-        <span>Tulips</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input name="flower" type="radio" value="Sunflowers" onclick="displayFlower()"/>
-        <span>Sunflowers</span>
-      </label>
-    </p>
-  </form>
+  <h5>Choose Your Favorite Flower</h5>
+
+  <p>
+    <label><input name="flower" type="radio" value="Roses" onchange="displayFlower()"/><span>Roses</span></label>
+  </p>
+  <p>
+    <label><input name="flower" type="radio" value="Tulips" onchange="displayFlower()"/><span>Tulips</span></label>
+  </p>
+  <p>
+    <label><input name="flower" type="radio" value="Sunflowers" onchange="displayFlower()"/><span>Sunflowers</span></label>
+  </p>
+
   <div id="flower-response" class="pink-text"></div>
 </div>
 
-
+<!-- EMAIL -->
 <div class="section container">
-  <h4>Join Our Flower Club 💌</h4>
+  <h5>Join Our Flower Club 💌</h5>
+
   <form onsubmit="submitEmail(event)">
     <div class="input-field">
       <input id="email" type="email" required>
       <label for="email">Email</label>
     </div>
-    <button type="submit" class="btn pink waves-effect">Subscribe</button>
+    <button class="btn pink" type="submit">Subscribe</button>
   </form>
+
   <div id="email-response"></div>
 </div>
 
-<main class="container">
+<!-- CAROUSEL -->
+<div class="section container">
+  <h5>Featured Bouquets</h5>
 
+  <div class="carousel" id="flowerCarousel">
+    <a class="carousel-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"></a>
+    <a class="carousel-item"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946"></a>
+    <a class="carousel-item"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"></a>
+    <a class="carousel-item"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51"></a>
+  </div>
 
-  <section>
-    <h5>Featured Bouquets</h5>
-
-```
-<div class="controls">
-  <button id="prev" class="btn pink">Prev</button>
-  <button id="next" class="btn pink">Next</button>
+  <div class="center" style="margin-top:10px;">
+    <button id="prev" class="btn pink">Prev</button>
+    <button id="next" class="btn pink">Next</button>
+  </div>
 </div>
 
-<div class="carousel" id="flowerCarousel">
-  <a class="carousel-item"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"/></a>
-  <a class="carousel-item"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946"/></a>
-  <a class="carousel-item"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"/></a>
-  <a class="carousel-item"><img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51"/></a>
+<!-- COLLAPSIBLE -->
+<div class="section container">
+  <h5>About Our Shop</h5>
+
+  <ul class="collapsible">
+    <li class="active">
+      <div class="collapsible-header"><i class="material-icons">local_florist</i>Our Story</div>
+      <div class="collapsible-body"><p>We create handcrafted bouquets using fresh flowers.</p></div>
+    </li>
+
+    <li>
+      <div class="collapsible-header"><i class="material-icons">favorite</i>Why Choose Us?</div>
+      <div class="collapsible-body"><p>Designed with creativity and care.</p></div>
+    </li>
+
+    <li>
+      <div class="collapsible-header"><i class="material-icons">local_shipping</i>Delivery</div>
+      <div class="collapsible-body"><p>Same-day delivery available locally.</p></div>
+    </li>
+  </ul>
 </div>
-```
 
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- Collapsible -->
-
-  <section>
-    <h5>About Our Shop</h5>
-
-```
-<ul class="collapsible" id="flowerInfo">
-  <li class="active">
-    <div class="collapsible-header"><i class="material-icons">local_florist</i>Our Story</div>
-    <div class="collapsible-body"><p>We create handcrafted bouquets using the freshest seasonal flowers.</p></div>
-  </li>
-
-  <li>
-    <div class="collapsible-header"><i class="material-icons">favorite</i>Why Choose Us?</div>
-    <div class="collapsible-body"><p>Each arrangement is designed with care, creativity, and love.</p></div>
-  </li>
-
-  <li>
-    <div class="collapsible-header"><i class="material-icons">local_shipping</i>Delivery Options</div>
-    <div class="collapsible-body"><p>Same-day delivery available for local orders.</p></div>
-  </li>
-</ul>
-```
-
-  </section>
-
-</main>
-
-
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script>
+// MATERIALIZE
 document.addEventListener('DOMContentLoaded', function () {
-const modals = document.querySelectorAll('.modal');
-M.Modal.init(modals);
-
   const carousel = M.Carousel.init(document.querySelector('#flowerCarousel'), {
     duration: 200,
     numVisible: 3
@@ -180,44 +153,42 @@ M.Modal.init(modals);
   document.getElementById('prev').onclick = () => carousel.prev();
   document.getElementById('next').onclick = () => carousel.next();
 
-  M.Collapsible.init(document.querySelector('#flowerInfo'), {
+  M.Collapsible.init(document.querySelectorAll('.collapsible'), {
     accordion: false
   });
-
 });
 
+// CART (jQuery)
+$(function(){
+  let cartCount = localStorage.getItem("cartCount") || 0;
+  $("#cartCount").text(cartCount);
+
+  $(".addCartBtn").click(function(){
+    cartCount++;
+    localStorage.setItem("cartCount", cartCount);
+    $("#cartCount").text(cartCount);
+  });
+});
+
+// OTHER FUNCTIONS
 function displayFlower() {
-  const flower = document.querySelector('input[name="flower"]:checked').value;
-  document.getElementById('flower-response').innerText = "You selected: " + flower + " 🌸";
+  const selected = document.querySelector('input[name="flower"]:checked');
+  if (selected) {
+    document.getElementById('flower-response').innerText =
+      "You selected: " + selected.value + " 🌸";
+  }
 }
 
 function submitEmail(event) {
   event.preventDefault();
   const email = document.getElementById('email').value;
+
   document.getElementById('email-response').innerText =
     "Thanks for joining! 🌷 Updates will be sent to: " + email;
+
   document.getElementById('email').value = "";
-  function submitEmail(event) {
-event.preventDefault();
-
-const email = document.getElementById('email').value;
-
-document.getElementById('email-response').innerText =
-"Thanks for joining! 🌷 Updates will be sent to: " + email;
-
-document.getElementById('modal-text').innerText =
-"You're officially part of Bloom & Petal! Updates will be sent to: " + email;
-
-const modal = M.Modal.getInstance(document.getElementById('thankYouModal'));
-modal.open();
-
-document.getElementById('email').value = "";
-}
-
 }
 </script>
 
 </body>
-</html>
-
 </html>
